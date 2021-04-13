@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+
+.card {
+  width: 75vw;
+  max-width: 400px;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__head img {
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 0.02px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.card__head___namewraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 15px;
+}
+
+.card__head___namewraper h2 {
+  font-size: 15px;
+}
+
+.card__head___namewraper p {
+  color: #5b7083;
+  font-size: 15px;
+}
+
+.card__head i {
+  color: #5b7083;
+  margin-left: auto;
+}
+
+.card__body {
+  margin-top: 15px;
+  color: #0f1419;
+  font-size: 23px;
+}
+
+.card__body p {
+  color: inherit;
+  font-size: 23px;
+}
+
+.card__body p span {
+  color: #1B95E0;
+}
+
+.card__body img {
+  margin-top: 15px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 1px solid #c4cfd6;
+  border-radius: 16px;
+}
+/*# sourceMappingURL=styles.css.map */
