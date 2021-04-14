@@ -284,7 +284,7 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
   width: 40%;
-  max-width: 450px;
+  max-width: 200px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
