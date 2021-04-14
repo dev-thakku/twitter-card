@@ -1,8 +1,95 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --clr-white: #fff;
+  --clr-black-1: #111;
+  --clr-black-2: #0f1419;
+  --clr-grey: #15202b;
+  --clr-dark-grey: #38444d;
+  --clr-light-grey-1: #5b7083;
+  --clr-light-grey-2: #8899a6;
+  --clr-light-grey-3: #c4cfd6;
+  --clr-light-grey-4: #ebeef0;
+  --clr-blue-1: #1b95e0;
+  --clr-blue-2: #1da1f2;
+  --clr-hover-blue: rgba(29, 161, 242, 0.1);
+}
+
+body {
+  --font-size-footer: 15px;
+  -webkit-transition: all 230ms ease-in-out;
+  transition: all 230ms ease-in-out;
+}
+
+body.light {
+  background: var(--clr-white);
+  color: var(--clr-black-1);
+  --clr-btn: var(--clr-white);
+  --clr-vbadge: var(--clr-blue-1);
+  --clr-body: var(--clr-black-2);
+  --clr-ancent-1: var(--clr-light-grey-2);
+  --clr-ancent-2: var(--clr-black-1);
+  --clr-border-light: var(--clr-light-grey-4);
+  --clr-border-dark: var(--clr-light-grey-3);
+}
+
+body.dark {
+  background: var(--clr-grey);
+  color: var(--clr-white);
+  --clr-btn: var(--clr-grey);
+  --clr-vbadge: var(--clr-white);
+  --clr-ancent-1: var(--clr-light-grey-2);
+  --clr-ancent-2: var(--clr-white);
+  --clr-body: var(--clr-white);
+  --clr-border-light: var(--clr-dark-grey);
+  --clr-border-dark: none;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background: var(--clr-btn);
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid var(--clr-border-light);
+}
+
+.header button {
+  background: var(--clr-btn);
+  color: var(--clr-ancent-2);
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 230ms ease-in-out;
+  transition: all 230ms ease-in-out;
+}
+
+.header button i.fal {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.header button:hover {
+  color: var(--clr-blue-1);
+  background: var(--clr-hover-blue);
 }
 
 .container {
@@ -15,8 +102,8 @@
 .card {
   width: 75vw;
   max-width: 400px;
-  padding: 25px;
-  border: 1px solid #ccc;
+  padding: 20px 25px;
+  border: 1px solid var(--clr-border-light);
   border-radius: 5px;
 }
 
@@ -27,14 +114,14 @@
 }
 
 .card__head img {
-  height: 50px;
+  height: 48px;
   -o-object-fit: contain;
      object-fit: contain;
-  border: 0.02px solid rgba(0, 0, 0, 0.1);
+  border: 0.02px solid var(--clr-border-light);
   border-radius: 50%;
 }
 
-.card__head___namewraper {
+.card__head___info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,23 +135,37 @@
   margin-left: 15px;
 }
 
-.card__head___namewraper h2 {
+.card__head___info--profilename {
   font-size: 15px;
 }
 
-.card__head___namewraper p {
-  color: #5b7083;
+.card__head___info--profilename span i {
+  color: var(--clr-vbadge);
+}
+
+.card__head___info--username {
+  color: var(--clr-ancent-1);
   font-size: 15px;
 }
 
-.card__head i {
-  color: #5b7083;
+.card__head .more-btn {
+  color: var(--clr-ancent-1);
   margin-left: auto;
+  padding: 5px 1px 5px 7px;
+  height: 20px;
+  width: 21px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card__head .more-btn:hover {
+  color: var(--clr-blue-1);
+  background: var(--clr-hover-blue);
 }
 
 .card__body {
   margin-top: 15px;
-  color: #0f1419;
+  color: var(--clr-body);
   font-size: 23px;
 }
 
@@ -73,8 +174,13 @@
   font-size: 23px;
 }
 
-.card__body p span {
-  color: #1B95E0;
+.card__body p a {
+  text-decoration: none;
+  color: var(--clr-blue-1);
+}
+
+.card__body p a:hover {
+  text-decoration: underline;
 }
 
 .card__body img {
@@ -82,7 +188,123 @@
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  border: 1px solid #c4cfd6;
+  border: 1px solid var(--clr-border-dark);
   border-radius: 16px;
+}
+
+.card__footer {
+  color: var(--clr-light-grey-1);
+  font-size: var(--font-size-footer);
+  line-height: 20px;
+}
+
+.card__footer___timeinfo {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--clr-border-light);
+}
+
+.card__footer___timeinfo p span::before {
+  content: "· ";
+}
+
+.card__footer___engagements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--clr-border-light);
+}
+
+.card__footer___engagements a {
+  color: inherit;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.card__footer___engagements a:hover {
+  text-decoration: underline;
+}
+
+.card__footer___engagements a span {
+  color: var(--clr-ancent-2);
+  font-weight: 700;
+}
+
+.card__footer___interactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 20px;
+}
+
+.card__footer___interactions .btn {
+  background: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card__footer___interactions .btn:hover {
+  color: var(--clr-blue-1);
+  background: var(--clr-hover-blue);
+}
+
+.card__footer___interactions .btn > i {
+  font-size: 20px;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5px;
+}
+
+.copyright p {
+  color: var(--clr-ancent-1);
+  margin-top: 10px;
+}
+
+.copyright p a {
+  color: var(--clr-blue-1);
+  text-decoration: none;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  max-width: 450px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.social a {
+  color: var(--clr-blue-2);
+  font-size: larger;
+}
+
+@media (max-width: 410px) {
+  body {
+    --font-size-footer: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    --font-size-footer: 13px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

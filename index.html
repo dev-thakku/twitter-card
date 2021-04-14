@@ -3,28 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable = no"
+    />
     <title>Twitter Card</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- font awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
     />
+    <!-- styles.css -->
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+
+  <body class="light">
+    <div class="header">
+      <button id="theme-btn"><i id="icon" class="fal fa-moon"></i></button>
+    </div>
+
     <div class="container">
       <div class="card">
         <div class="card__head">
-          <img
-            src="images/google.jpg"
-            alt="avatar"
-            class="avatar"
-          />
-          <div class="card__head___namewraper">
-            <h2>Jemshith T K</h2>
-            <p>@dev_thakku</p>
+          <img src="images/google.jpg" alt="avatar" class="avatar" />
+          <div class="card__head___info">
+            <h2 class="card__head___info--profilename">
+              Google
+              <span class="card__head___info--verified"
+                ><i class="fas fa-badge-check"></i
+              ></span>
+            </h2>
+            <p class="card__head___info--username">@google</p>
           </div>
-          <i class="fas fa-ellipsis-h"></i>
+          <div class="more-btn"><i class="fas fa-ellipsis-h"></i></div>
         </div>
 
         <div class="card__body">
@@ -33,18 +44,49 @@
             laborum beatae vitae, cupiditate veniam culpa exercitationem
             distinctio, eveniet amet nulla magnam, facere sapiente ab
             repudiandae.
-            <span>#google</span>
+            <a href="#">#google</a>
           </p>
           <img
             src="https://i.gadgets360cdn.com/large/Pixel_4a_India_october_17_1601529068844.jpg"
             alt="tweet image"
           />
         </div>
-        <div class="card__footer"></div>
+
+        <div class="card__footer">
+          <div class="card__footer___timeinfo">
+            <p>
+              12:49 AM
+              <span>Apr 8, 2021</span>
+              <span>Google</span>
+            </p>
+          </div>
+          <div class="card__footer___engagements">
+            <a href="#"><span>85</span> Retweets</a>
+            <a href="#"><span>5</span> Quote Tweets</a>
+            <a href="#"><span>585</span> Likes</a>
+          </div>
+          <div class="card__footer___interactions">
+            <button class="btn"><i class="fal fa-comment"></i></button>
+            <button class="btn"><i class="fal fa-retweet"></i></button>
+            <button class="btn"><i class="fal fa-heart"></i></button>
+            <button class="btn"><i class="fal fa-share"></i></button>
+          </div>
+        </div>
       </div>
+      <div class="copyright">
+        <p>Twitter Card Clone</p>
+        <p>© 2021 <a href="https://jemshith.tk/">dev_thakku</a></p>
+      </div>
+      <div class="social">
+          <a href="https://facebook.com/dev.thakku/" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://twitter.com/dev_thakku" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/dev-thakku" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/dev-thakku/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </div>
 
-    <script src="js/script.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
